@@ -34,10 +34,12 @@ var ModalContainer = React.createClass({
   //对话框打开时触发
   _openHandler:function(){
   	this.props.openHandler&&this.props.openHandler();
+  	this.props.modal._openHandler&&this.props.modal._openHandler();
   },
   //对话框关闭时触发
   _closeHandler:function(){
   	this.props.closeHandler&&this.props.closeHandler();
+  	this.props.modal._closeHandler&&this.props.modal._closeHandler();
   },
   componentDidUpdate:function(){
   	var self=this;
